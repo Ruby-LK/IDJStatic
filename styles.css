@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    background-color: #121212;
+    text-align: center;
+}
+
+body{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    background-color: #12121200;
+    text-align: center;
+}
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+
+/* Bottom Bar */
+.bottom-bar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    background-color: #121212;
+    padding: 10px 0;
+    color: white;
+    font-size: 15px;
+}
+
+.ep1{
+    color: white;
+    font-size: 16px;
+}
+.ep2{
+    color: white;
+    font-size: 14px;
+}
+.ep3{
+    color: rgb(175, 175, 175);
+    font-size: 14px;
+}
+
+/* Main Content */
+.container {
+    text-align: center;
+    color: white;
+    animation: fadeInUp 1.5s ease-in-out;
+} 
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+.pp {
+    font-size: 24px;
+    opacity: 0;
+    animation: fadeIn 2.5s forwards;
+    animation-delay: 0.5s;
+}
+.social-buttons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    color: white;
+    background-color: #121212;
+    font-size: 24px;
+    text-decoration: none;
+    border-radius: 15%;
+    transition: all 0.3s ease-in-out;
+}
+.social-btn:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 600px) {
+    h1 { font-size: 36px; }
+    p { font-size: 18px; }
+}
