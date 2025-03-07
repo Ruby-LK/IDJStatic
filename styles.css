@@ -26,6 +26,7 @@ body{
     background-color: #12121200;
     text-align: center;
 }
+
 #particles-js {
     position: absolute;
     width: 100%;
@@ -61,24 +62,27 @@ body{
 
 /* Main Content */
 .container {
+    position: relative;
+    z-index: 1;
     text-align: center;
     color: white;
     animation: fadeInUp 1.5s ease-in-out;
 } 
 h1 {
     font-size: 48px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    animation: fadeIn 2s forwards, glitch-anim 1s infinite;
+    color: white;
     opacity: 0;
-    animation: fadeIn 2s forwards;
 }
 .pp {
-    font-size: 24px;
+    font-size: 20px;
     opacity: 0;
     animation: fadeIn 2.5s forwards;
     animation-delay: 0.5s;
 }
 .social-buttons {
-    margin-top: 40px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     gap: 15px;
@@ -87,12 +91,12 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border: 2px solid white;
     color: white;
     background-color: #121212;
-    font-size: 24px;
+    font-size: 20px;
     text-decoration: none;
     border-radius: 15%;
     transition: all 0.3s ease-in-out;
@@ -114,4 +118,32 @@ h1 {
 @media (max-width: 600px) {
     h1 { font-size: 36px; }
     p { font-size: 18px; }
+}
+
+/* Glitch Effect */
+@keyframes glitch-anim {
+    0% {
+        transform: translate(2px, 0);
+        text-shadow: 3px 0 red, -3px 0 blue;
+    }
+    20% {
+        transform: translate(-2px, 0);
+        text-shadow: 3px 0 red, -3px 0 blue;
+    }
+    40% {
+        transform: translate(-2px, 0);
+        text-shadow: 3px 0 red, -3px 0 blue;
+    }
+    60% {
+        transform: translate(2px, 0);
+        text-shadow: 3px 0 red, -3px 0 blue;
+    }
+    80% {
+        transform: translate(1px, 0);
+        text-shadow: 3px 0 red, -3px 0 blue;
+    }
+    100% {
+        transform: translate(0, 0);
+        text-shadow: 3px 0 red, -3px 0 blue;
+    }
 }
