@@ -71,7 +71,7 @@ body{
 h1 {
     font-size: 48px;
     margin-bottom: 10px;
-    animation: fadeIn 2s forwards, glitch-anim 1s infinite;
+    animation: fadeIn 2s forwards, glitch 2s ease infinite 2s alternate-reverse;
     color: white;
     opacity: 0;
 }
@@ -147,3 +147,63 @@ h1 {
         text-shadow: 3px 0 red, -3px 0 blue;
     }
 }
+
+@keyframes glitch-effect {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6), -2px -2px 3px rgba(0, 0, 0, 0.6);
+    }
+    25% {
+        opacity: 0.6;
+        transform: translateX(5px);
+        text-shadow: 3px 3px 5px red, -3px -3px 5px blue;
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(-5px);
+        text-shadow: -3px -3px 5px red, 3px 3px 5px blue;
+    }
+    75% {
+        opacity: 0.6;
+        transform: translateX(5px);
+        text-shadow: 3px 3px 5px red, -3px -3px 5px blue;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6), -2px -2px 3px rgba(0, 0, 0, 0.6);
+    }
+}
+
+
+@keyframes stack {
+    0% {
+      opacity: 0;
+      transform: translateX(-50%);
+      text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+    };
+    60% {
+      opacity: 0.5;
+      transform: translateX(50%);
+    }
+    80% {
+      transform: none;
+      opacity: 1;
+      text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+    }
+    100% {
+      text-shadow: none;
+    }
+  }
+  
+  @keyframes glitch {
+    0% {
+      text-shadow: -2px 3px 0 red, 2px -3px 0 blue;
+      transform: translate(var(--glitch-translate));
+    }
+    2% {
+      text-shadow: 2px -3px 0 red, -2px 3px 0 blue;
+    }
+    4%, 100% {  text-shadow: none; transform: none; }
+  }
