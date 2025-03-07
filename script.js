@@ -38,7 +38,7 @@ particlesJS("particles-js", {
         }
     },
     "interactivity": {
-        "detect_on": "canvas",
+        "detect_on": "window",  // Detect interaction even if the cursor is outside the canvas
         "events": {
             "onhover": { "enable": true, "mode": "repulse" },
             "onclick": { "enable": true, "mode": "push" },
